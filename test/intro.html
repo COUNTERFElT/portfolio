@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      .sw{
+        color:blue;
+      }
+      #smc{
+        color:darkgreen;
+      }
+    </style>
+    <script src="color.js">
+    </script>
+  </head>
+  <body>
+    <h1>이새영의 프로필</h1>
+    <h3 style="background-color:black; color:white;">2학년-9반-이새영</h3>
+    <h4><span class="sw">소프트웨어 1등,</span><span id="smc">세명컴퓨터 고등학교</span></h4>
+    <input type="button" id="pink_white" value="pink" onclick="
+    bodycolor('white');
+    bodybackgroundcolor('pink')">
+    <input type="button" id="powderblue_white" value="powderblue" onclick="
+    bodycolor('white');
+    bodybackgroundcolor('powderblue')">
+    <input type="button" id="change" value="on" onclick="addc(this);">
+    <br>
+    <script>
+      var day={
+        monday:'happy',
+        tuesday:'sad',
+        wendesday:'exciting'
+      };
+      for (var key in day){
+        document.write(key+':'+day[key]+'<br>');
+      }
+      var month=['monday', 'tuesday', 'wendesday', 'thursday', 'friday', 'saturday'];
+      document.write('<h3>today is '+month[2]+'.</h3>');
+    </script>
+    <ol>
+      <a href="1.html"><li>html</li></a>
+      <a href="2.html"><li>CSS</li></a>
+      <a href="3.html"><li>Java</li></a>
+    </ol>
+    <script>
+      function value_check(){
+      var check_count = document.getElementsByName("fruit").length;
+
+      for(var i=0; i<check_count; i++){
+        if(document.getElementsByName("fruit").[i].checked==true){
+          alert(document.getElementsByName(fruit)[i].value);
+        }
+      }
+    }
+    </script>
+    <input type="checkbox" name="language" value="javascript"/>javascript<br>
+    <input type="checkbox" name="language" value="c"/>c<br>
+    <input type="checkbox" name="language" value="python"/>python<br>
+    <input type="button" value="체크된 객체 가져오기" onclick="value_check()
+    ">
+  </body>
+</html>
